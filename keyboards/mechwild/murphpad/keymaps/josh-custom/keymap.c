@@ -72,7 +72,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 			     KC_1,    KC_2,    KC_3,    KC_4,
 			     KC_Q,    KC_W,    KC_E,    KC_R,
 		KC_TRNS, KC_A,    KC_S,    KC_D,    KC_F,
-		KC_LFFT, KC_Z,    KC_X,    KC_C,    KC_V,
+		KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,
 		KC_LCTL, KC_ESC,  KC_TAB, KC_LALT, KC_SPC,
 			     _______, _______, _______
 	)
@@ -139,6 +139,9 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
 		case _FN3:
 			oled_write_ln_P(PSTR("Reset?"), false);
 			break;
+        case _FN4:
+            oled_write_ln_P(PSTR("PEW!"), false);
+            break;
 		default:
 			oled_write_ln_P(PSTR("Undef"), false);
 	}
